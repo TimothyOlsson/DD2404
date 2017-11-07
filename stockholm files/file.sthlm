@@ -1,0 +1,9 @@
+# STOCKHOLM 1.0
+#=GF  CC  This is a trivial made-up example!
+#=GS  PROT1_PIG  OS Sus scrofa
+#=GS  PROT1_DOG  OS Canis familiaris
+#=GS  PROT1_PIG  OS Oryctolagus cuniculus
+PROT1_PIG   ACGT
+PROT1_DOG   AGTG
+PROT1_BUNNY TATA
+//
