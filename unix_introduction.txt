@@ -1,0 +1,12 @@
+ls -l = 
+
+cat = prints out file contents to terminal
+more = 
+less = 
+head = prints out first part of file
+tail = prints out last part of file
+wc = word count, counts characters, words and lines in a file
+grep = finds pattern and displays lines where they are
+sort = sorts depending on different options. Numerical/alphabetical
+uniq = finds repeated/non repeated lines in a file (obs: adjecent lines)
+cut = cuts file/string
