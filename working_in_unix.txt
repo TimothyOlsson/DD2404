@@ -1,0 +1,40 @@
+1.	There are 7 columns in the file. (counting by the eye)
+
+2.	There are 29305 lines in the file.
+	used the command: "wc gpcr.tab" and got the output: 29305 402852 3541806
+
+3.	2255 lines searching for "Human".
+	Used the command "grep Human gpcr.tab | wc" i.e piped the result from grep to wc.
+	
+	2244 lines for searching for "Homo sapiens"
+	Using the command "grep "Homo sapiens" gpcr.tab | wc"
+
+4.	The file is tab delimited. Lenght on line 7.
+	Using the command: "cut -f 7 gpcr.tab | sort -n --reverse" yields the result that the shortes is 10.
+	
+	Explanation: 
+	"cut -f 7 gpcr.tab", cuts away everything except field 7 in the file, where the lengths are stored.
+	"| sort -n --reverse", the result of the cut is piped to sort. -n sorts numerically and --reverse gets the lowest numbers first.
+	Without --reverse, the highest numbers are shown first.
+
+5. 	11136 species.
+	Used the command: "cut -f 6 gpcr.tab | uniq -u | wc"
+
+	Explanation:
+	"cut -f 6 gpcr.tab", cuts away everything except the 6th column, where the species are listed.w
+	"| uniq -u", only prints out the uniq lines from the cut
+	"| wc", uses the data from uniq to count the amount of lines.
+
+	This of course could be improved. We don't see any of the intermediate data, so we could find any bugs.
+	By using "tee" between the pipes, the data could be stored.
+
+	Possible bugs:
+	Is the organisms name sorted? If not, sort the data before piping to uniq, since it only looks at adjacent lines.
+	Are the names mixed? i.e lower and upper case etc. In that case, add -i to ignore case.
+	Does some names have extra spaces, not have paranthesis when other does not? add -w to uniq to only compare a set amount of characters.
+
+6.		
+
+
+
+
