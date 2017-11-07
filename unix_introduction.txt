@@ -22,3 +22,4 @@ grep = finds pattern and displays lines where they are
 sort = sorts depending on different options. Numerical/alphabetical
 uniq = finds repeated/non repeated lines in a file (obs: adjecent lines)
 cut = cuts file/string
+test
