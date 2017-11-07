@@ -33,7 +33,12 @@
 	Are the names mixed? i.e lower and upper case etc. In that case, add -i to ignore case.
 	Does some names have extra spaces, not have paranthesis when other does not? add -w to uniq to only compare a set amount of characters.
 
-6.		
+6.	muscle is a program that aligns multiple sequences by doing pairwise alignment. You select multiple sequences (files) and the program finds
+	the optimum alignment between all the sequences (PS: a gap will always be gaps)
+
+	each file in the directory that we got are a fasta file with multiple sequences that needs to be aligned.
+
+	See .sh file in github
 
 
 
