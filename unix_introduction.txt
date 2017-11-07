@@ -1,8 +1,20 @@
-ls -l = 
+ls -l = ls lists all directories in the folder while -l is an argument that makes ls use a "long list" format.
+	with -l, the folders creation date is shown, files extensions and also the permission of the files.
+	
+	example: -rwxr-xr--
+	The first three characters (excluding the first) is the owner. rwx means that the owner can read, write and execute the files.
+	The next three characters are the permissions of the group which the file belongs. r-x means read and execute.
+	The next three characters are the permissions of everybody else. r-- means that everybody can read the file, but nothing else.
+	
+	To change the permission, write the command terminal:
+	chmod 755 <file_name.extension>
+	755 means 7 for owner, 5 for group and 5 for everybody else. The numbers correspond to different permissions.
+
+
 
 cat = prints out file contents to terminal
-more = 
-less = 
+more = prints the file contents to the terminal, but only one page at a time. It allows you to scroll through the lines.
+less = A better version of more (less is more). It is a terminal pager program a little similar to more, but with more features. q to quit.
 head = prints out first part of file
 tail = prints out last part of file
 wc = word count, counts characters, words and lines in a file
