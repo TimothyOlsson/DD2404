@@ -11,9 +11,9 @@ with open('file.sthlm','r') as f:
 #Create a list with the first element as an empty string
 contents = ['']
 
-#Removes all hashes and //
+#Removes all lines with hashes, // and empty lines
 for i in file_contents:
-    if ("#" in i) or ('//' in i):
+    if ("#" in i) or ('//' in i) or (i == '\n'):
         pass
     else:
         #Append to content list if it does not have it
