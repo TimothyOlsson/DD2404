@@ -7,13 +7,16 @@ pdb.set_trace()
 logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',
                     filename='example.log',
                     level=logging.DEBUG)
-                    
+
+
 logging.info('\n\n########\nStart of run')
 
 k=5
-logging.info(str(k))
+print(k)
+logging.info('K = '+str(k))
 
 y=0
+print(y)
 logging.warning('This is a warning. y = %s',str(y))
 
 q=None

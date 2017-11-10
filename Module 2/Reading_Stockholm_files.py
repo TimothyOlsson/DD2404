@@ -2,7 +2,7 @@
 import os
 
 #Change directory
-os.chdir(r'stockholm files')
+os.chdir(r'files')
 
 #Opens and reads the file. Gets all the lines
 with open('file.sthlm','r') as f:
@@ -13,7 +13,7 @@ contents = ['']
 
 #Removes all lines with hashes, // and empty lines
 for i in file_contents:
-    if ("#" in i) or ('//' in i) or (i == '\n'):
+    if ("#" in i[0]) or ('//' in i) or (i == '\n'):
         pass
     else:
         #Append to content list if it does not have it

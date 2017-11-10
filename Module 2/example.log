@@ -1,0 +1,20 @@
+2017-11-10 11:41:33,675 INFO     
+
+########
+Start of run
+2017-11-10 11:41:34,128 INFO     5
+2017-11-10 11:41:34,588 WARNING  This is a warning. y = 0
+2017-11-10 11:41:35,046 ERROR    This is an error, x = None
+2017-11-10 11:44:31,167 INFO     
+
+########
+Start of run
+2017-11-10 11:44:31,174 INFO     K = 5
+2017-11-10 11:44:31,176 WARNING  This is a warning. y = 0
+2017-11-10 11:44:31,176 ERROR    This is an error, x = None
+2017-11-10 11:44:36,177 CRITICAL Error message: division by zero
+2017-11-10 11:46:26,404 INFO     
+
+########
+Start of run
+2017-11-10 11:46:38,901 INFO     K = 5
