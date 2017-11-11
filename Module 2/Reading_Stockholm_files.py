@@ -13,10 +13,13 @@ contents = ['']
 
 #Removes all lines with hashes, // and empty lines
 for i in file_contents:
-    if ("#" in i[0]) or ('//' in i) or (i == '\n'):
+    if i.startswith('#'): #Starts with # = comment
         pass
-    else:
-        #Append to content list if it does not have it
+    elif i == '\n': #Ignore empty line
+        pass
+    elif i.startswith('//'): #End of file
+        break
+    else: #Append to content list
         contents.append(i)
 
 #Takes the length of the list -1 (since the first element is the length)

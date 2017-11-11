@@ -14,29 +14,31 @@ with open(filename + '.sthlm','r') as f:
 #Create a list
 contents = []
 
-#Removes all lines with hashes, // and empty lines
+#Removes all lines that starts with hash, // and empty lines
 for i in file_contents:
-    if ("#" in i) or ('//' in i) or (i == '\n'):
+    if i.startswith('#'): #Starts with # = comment
         pass
-    else:
-        #Append to content list if it does not have it
+    elif i == '\n': #Ignore empty line
+        pass
+    elif i.startswith('//'): #End of file
+        break
+    else: #Append to content list
         contents.append(i)
 
 #Create a new list
 fixed_contents = []
 
 #Opens and writes to a new file
-with open(filename + '_fixed.sthlm','w') as f:
-    for i in contents:
-        i = i.split() #Creates a splitted list
-        for ii in range(0,2):
-            if ii == 0:
-                f.write('>' + i[ii] + '\n')
-            else:
-                while (len(i[ii])) > 60:
-                    f.write(i[ii][:60] + '\n')
-                    i[ii] = i[ii][60:]
-                f.write(i[ii] + '\n')
-        
+for i in contents:
+    i = i.split() #Creates a splitted list, with name and sequences
+
+    #first line with name, add > and \n
+    fixed_contents.append('>' + i[0] + '\n')
+
+    #Add \n for every 60 characters in sequence
+    fixed_contents.append(('\n'.join(i[1][j:j+60] for j in range(0, len(i[1]), 60))) + '\n')
 
 
+with open(filename + '_fixed.sthlm', 'w') as f:
+    for i in fixed_contents:
+        f.write(i)
