@@ -46,6 +46,7 @@ class bio_class():
         sequences = []
         _seq = []
         for line in file_contents:
+            line = str(line) #Bug with empty comments
             if line.startswith('>'):
                 names.append(line.rstrip('\n'))
                 if _seq != []:
