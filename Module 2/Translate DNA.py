@@ -64,9 +64,10 @@ class bio_class():
             found_orfs = []
             for orf in range(0,3): #Check 3 ORFS
                 _orf_list = [seq[i+orf:i+orf+3] for i in range(0, len(seq), 3)]
+                _orf_list = [x for x in _orf_list if len(x) == 3] #Remove non codons
                 positions_stop = [index for index,value in enumerate(_orf_list) if value in self.stop_codons]
                 if positions_stop == []:
-                    pass
+                    found_orfs.append(''.join(_orf_list))
                 else:
                     found_orfs.append(''.join(_orf_list[:positions_stop[-1]]))
                     
@@ -111,7 +112,12 @@ if __name__ == "__main__":
     found_exons = bio.find_long_exons(sequences)
     translated_DNA = bio.translate_DNA(found_exons)
 
+    list_of_all_things = [names, sequences, found_exons, translated_DNA]
 
+    for i in list_of_all_things:
+        print('')
+        for j in i:
+            print(j)
 
 
 
