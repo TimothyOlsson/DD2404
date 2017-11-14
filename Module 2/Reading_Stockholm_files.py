@@ -4,8 +4,11 @@ import os
 #Change directory
 os.chdir(r'files')
 
+#Input filename
+filename = input('Filename: ')
+
 #Opens and reads the file. Gets all the lines
-with open('file.sthlm','r') as f:
+with open(filename + '.sthlm','r') as f:
     file_contents = f.readlines()
 
 #Create a list with the first element as an empty string
