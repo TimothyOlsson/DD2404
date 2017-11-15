@@ -15,9 +15,10 @@ file_list = sys.argv[1:]
 
 start_time = time.time()
 
+print('Start of run\n')
 for file_name in file_list:
     for seq in SeqIO.parse(file_name, "fasta"):
-        rh = NCBIWWW.qblast("blastp", "p", seq.seq)
+        rh = NCBIWWW.qblast("blastp", "nr", seq.seq) #NR is the non-redundant prot database
 
         #Reading rh again will delete it, write as file
         with open('blasted_' + os.path.splitext(file_name)[0] + '.xml','w') as f:
