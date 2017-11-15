@@ -35,9 +35,6 @@ def read_fasta(self, file_contents):
     return names, sequences
 
 
-
-
-
 file_list = sys.argv[1:] #First in list is the name of the script
 os.chdir('files')
 
