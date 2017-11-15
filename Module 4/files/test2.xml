@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>CST8</BlastOutput_query-def>
+  <BlastOutput_query-len>429</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_hits>
+        <Hit>
+          <Hit_num>1</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|21128</Hit_id>
+          <Hit_def>lcl|CST8_HUMAN (O60676) Cystatin-related epididymal spermatogenic protein precursor (Cystatin 8)</Hit_def>
+          <Hit_accession>21128</Hit_accession>
+          <Hit_len>142</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>264.233</Hsp_bit-score>
+              <Hsp_score>674</Hsp_score>
+              <Hsp_evalue>5.49912e-71</Hsp_evalue>
+              <Hsp_query-from>1</Hsp_query-from>
+              <Hsp_query-to>426</Hsp_query-to>
+              <Hsp_hit-from>1</Hsp_hit-from>
+              <Hsp_hit-to>142</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>142</Hsp_identity>
+              <Hsp_positive>142</Hsp_positive>
+              <Hsp_align-len>142</Hsp_align-len>
+              <Hsp_qseq>MPRCRWLSLILLTIPLALVARKDPKKNETGVLRKLKPVNASNANVKQCLWFAMQEYNKESEDKYVFLVVKTLQAQLQVTNLLEYLIDVEIARSDCRKPLSTNEICAIQENSKLKRKLSCSFLVGALPWNGEFTVMEKKCEDA</Hsp_qseq>
+              <Hsp_hseq>MPRCRWLSLILLTIPLALVARKDPKKNETGVLRKLKPVNASNANVKQCLWFAMQEYNKESEDKYVFLVVKTLQAQLQVTNLLEYLIDVEIARSDCRKPLSTNEICAIQENSKLKRKLSCSFLVGALPWNGEFTVMEKKCEDA</Hsp_hseq>
+              <Hsp_midline>MPRCRWLSLILLTIPLALVARKDPKKNETGVLRKLKPVNASNANVKQCLWFAMQEYNKESEDKYVFLVVKTLQAQLQVTNLLEYLIDVEIARSDCRKPLSTNEICAIQENSKLKRKLSCSFLVGALPWNGEFTVMEKKCEDA</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+      </Iteration_hits>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>1.72392e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>CST11</BlastOutput_query-def>
+  <BlastOutput_query-len>417</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_hits>
+        <Hit>
+          <Hit_num>1</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|20802</Hit_id>
+          <Hit_def>lcl|CS11_HUMAN (Q9H112) Cystatin 11 precursor</Hit_def>
+          <Hit_accession>20802</Hit_accession>
+          <Hit_len>137</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>259.61</Hsp_bit-score>
+              <Hsp_score>662</Hsp_score>
+              <Hsp_evalue>1.23135e-69</Hsp_evalue>
+              <Hsp_query-from>4</Hsp_query-from>
+              <Hsp_query-to>414</Hsp_query-to>
+              <Hsp_hit-from>1</Hsp_hit-from>
+              <Hsp_hit-to>137</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>137</Hsp_identity>
+              <Hsp_positive>137</Hsp_positive>
+              <Hsp_align-len>137</Hsp_align-len>
+              <Hsp_qseq>MAEPWQALQLLLAILLTLMALPYQARKKTFLSVHEVMAVENYAKDSLQWITDQYNKESDDKYHFRIFRVLKVQRQVTDHLEYHLNVEMQWTTCQKPETTNCVPQERELHKQVNCFFSVFAVPWFEQYKILNKSCSSD</Hsp_qseq>
+              <Hsp_hseq>MAEPWQALQLLLAILLTLMALPYQARKKTFLSVHEVMAVENYAKDSLQWITDQYNKESDDKYHFRIFRVLKVQRQVTDHLEYHLNVEMQWTTCQKPETTNCVPQERELHKQVNCFFSVFAVPWFEQYKILNKSCSSD</Hsp_hseq>
+              <Hsp_midline>MAEPWQALQLLLAILLTLMALPYQARKKTFLSVHEVMAVENYAKDSLQWITDQYNKESDDKYHFRIFRVLKVQRQVTDHLEYHLNVEMQWTTCQKPETTNCVPQERELHKQVNCFFSVFAVPWFEQYKILNKSCSSD</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+      </Iteration_hits>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>1.5672e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>CST3</BlastOutput_query-def>
+  <BlastOutput_query-len>441</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_hits>
+        <Hit>
+          <Hit_num>1</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|24128</Hit_id>
+          <Hit_def>lcl|CYTC_HUMAN (P01034) Cystatin C precursor (Neuroendocrine basic polypeptide) (Gamma-trace) (Post-gamma-globulin)</Hit_def>
+          <Hit_accession>24128</Hit_accession>
+          <Hit_len>146</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>236.498</Hsp_bit-score>
+              <Hsp_score>602</Hsp_score>
+              <Hsp_evalue>1.3068e-62</Hsp_evalue>
+              <Hsp_query-from>100</Hsp_query-from>
+              <Hsp_query-to>438</Hsp_query-to>
+              <Hsp_hit-from>34</Hsp_hit-from>
+              <Hsp_hit-to>146</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>113</Hsp_identity>
+              <Hsp_positive>113</Hsp_positive>
+              <Hsp_align-len>113</Hsp_align-len>
+              <Hsp_qseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_qseq>
+              <Hsp_hseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_hseq>
+              <Hsp_midline>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+        <Hit>
+          <Hit_num>2</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|24129</Hit_id>
+          <Hit_def>lcl|CYTC_MACMU (O19092) Cystatin C precursor</Hit_def>
+          <Hit_accession>24129</Hit_accession>
+          <Hit_len>146</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>231.106</Hsp_bit-score>
+              <Hsp_score>588</Hsp_score>
+              <Hsp_evalue>5.49036e-61</Hsp_evalue>
+              <Hsp_query-from>100</Hsp_query-from>
+              <Hsp_query-to>438</Hsp_query-to>
+              <Hsp_hit-from>34</Hsp_hit-from>
+              <Hsp_hit-to>146</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>110</Hsp_identity>
+              <Hsp_positive>111</Hsp_positive>
+              <Hsp_align-len>113</Hsp_align-len>
+              <Hsp_qseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_qseq>
+              <Hsp_hseq>RLVGGPMDASVEEEGVRRALDFAVSEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHEQPHLKRKAFCSFQIYTVPWQGTMTLSKSTCQDA</Hsp_hseq>
+              <Hsp_midline>RLVGGPMDASVEEEGVRRALDFAV EYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFH+QPHLKRKAFCSFQIY VPWQGTMTLSKSTCQDA</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+        <Hit>
+          <Hit_num>3</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|24133</Hit_id>
+          <Hit_def>lcl|CYTC_SAISC (O19093) Cystatin C precursor</Hit_def>
+          <Hit_accession>24133</Hit_accession>
+          <Hit_len>146</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>225.328</Hsp_bit-score>
+              <Hsp_score>573</Hsp_score>
+              <Hsp_evalue>3.01266e-59</Hsp_evalue>
+              <Hsp_query-from>100</Hsp_query-from>
+              <Hsp_query-to>438</Hsp_query-to>
+              <Hsp_hit-from>34</Hsp_hit-from>
+              <Hsp_hit-to>146</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>106</Hsp_identity>
+              <Hsp_positive>110</Hsp_positive>
+              <Hsp_align-len>113</Hsp_align-len>
+              <Hsp_qseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_qseq>
+              <Hsp_hseq>RLLGGPMDASVEEEGVRRALDFAVSEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVEMGRTTCTKNQPNLDNCPFHEQPHLKRKAFCSFQIYSVPWQGIMTLSKSTCQDA</Hsp_hseq>
+              <Hsp_midline>RL+GGPMDASVEEEGVRRALDFAV EYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVE+GRTTCTK QPNLDNCPFH+QPHLKRKAFCSFQIY+VPWQG MTLSKSTCQDA</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+        <Hit>
+          <Hit_num>4</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|24132</Hit_id>
+          <Hit_def>lcl|CYTC_RAT (P14841) Cystatin C precursor (Fragment)</Hit_def>
+          <Hit_accession>24132</Hit_accession>
+          <Hit_len>127</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>189.504</Hsp_bit-score>
+              <Hsp_score>480</Hsp_score>
+              <Hsp_evalue>1.83196e-48</Hsp_evalue>
+              <Hsp_query-from>100</Hsp_query-from>
+              <Hsp_query-to>438</Hsp_query-to>
+              <Hsp_hit-from>15</Hsp_hit-from>
+              <Hsp_hit-to>127</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>85</Hsp_identity>
+              <Hsp_positive>100</Hsp_positive>
+              <Hsp_align-len>113</Hsp_align-len>
+              <Hsp_qseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_qseq>
+              <Hsp_hseq>RLLGAPQEADASEEGVQRALDFAVSEYNKGSNDAYHSRAIQVVRARKQLVAGINYYLDVEMGRTTCTKSQTNLTNCPFHDQPHLMRKALCSFQIYSVPWKGTHTLTKSSCKNA</Hsp_hseq>
+              <Hsp_midline>RL+G P +A   EEGV+RALDFAV EYNK SND YHSRA+QVVRARKQ+VAG+NY+LDVE+GRTTCTK+Q NL NCPFHDQPHL RKA CSFQIY+VPW+GT TL+KS+C++A</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+        <Hit>
+          <Hit_num>5</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|24130</Hit_id>
+          <Hit_def>lcl|CYTC_MOUSE (P21460) Cystatin C precursor (Cystatin 3)</Hit_def>
+          <Hit_accession>24130</Hit_accession>
+          <Hit_len>140</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>185.267</Hsp_bit-score>
+              <Hsp_score>469</Hsp_score>
+              <Hsp_evalue>3.45493e-47</Hsp_evalue>
+              <Hsp_query-from>100</Hsp_query-from>
+              <Hsp_query-to>438</Hsp_query-to>
+              <Hsp_hit-from>28</Hsp_hit-from>
+              <Hsp_hit-to>140</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>84</Hsp_identity>
+              <Hsp_positive>99</Hsp_positive>
+              <Hsp_align-len>113</Hsp_align-len>
+              <Hsp_qseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQDA</Hsp_qseq>
+              <Hsp_hseq>RMLGAPEEADANEEGVRRALDFAVSEYNKGSNDAYHSRAIQVVRARKQLVAGVNYFLDVEMGRTTCTKSQTNLTDCPFHDQPHLMRKALCSFQIYSVPWKGTHSLTKFSCKNA</Hsp_hseq>
+              <Hsp_midline>R++G P +A   EEGVRRALDFAV EYNK SND YHSRA+QVVRARKQ+VAGVNYFLDVE+GRTTCTK+Q NL +CPFHDQPHL RKA CSFQIY+VPW+GT +L+K +C++A</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+        <Hit>
+          <Hit_num>6</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|24127</Hit_id>
+          <Hit_def>lcl|CYTC_BOVIN (P01035) Cystatin C precursor (Colostrum thiol proteinase inhibitor)</Hit_def>
+          <Hit_accession>24127</Hit_accession>
+          <Hit_len>148</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>171.014</Hsp_bit-score>
+              <Hsp_score>432</Hsp_score>
+              <Hsp_evalue>6.74271e-43</Hsp_evalue>
+              <Hsp_query-from>100</Hsp_query-from>
+              <Hsp_query-to>435</Hsp_query-to>
+              <Hsp_hit-from>37</Hsp_hit-from>
+              <Hsp_hit-to>148</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>77</Hsp_identity>
+              <Hsp_positive>93</Hsp_positive>
+              <Hsp_align-len>112</Hsp_align-len>
+              <Hsp_qseq>RLVGGPMDASVEEEGVRRALDFAVGEYNKASNDMYHSRALQVVRARKQIVAGVNYFLDVELGRTTCTKTQPNLDNCPFHDQPHLKRKAFCSFQIYAVPWQGTMTLSKSTCQD</Hsp_qseq>
+              <Hsp_hseq>RLLGGLMEADVNEEGVQEALSFAVSEFNKRSNDAYQSRVVRVVRARKQVVSGMNYFLDVELGRTTCTKSQANLDSCPFHNQPHLKREKLCSFQVYVVPWMNTINLVKFSCQD</Hsp_hseq>
+              <Hsp_midline>RL+GG M+A V EEGV+ AL FAV E+NK SND Y SR ++VVRARKQ+V+G+NYFLDVELGRTTCTK+Q NLD+CPFH+QPHLKR+  CSFQ+Y VPW  T+ L K +CQD</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+      </Iteration_hits>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>1.83466e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>CSTL1</BlastOutput_query-def>
+  <BlastOutput_query-len>438</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_hits>
+        <Hit>
+          <Hit_num>1</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|21141</Hit_id>
+          <Hit_def>lcl|CSTL_HUMAN (Q9H114) Cystatin-like 1 precursor</Hit_def>
+          <Hit_accession>21141</Hit_accession>
+          <Hit_len>165</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>266.929</Hsp_bit-score>
+              <Hsp_score>681</Hsp_score>
+              <Hsp_evalue>8.83679e-72</Hsp_evalue>
+              <Hsp_query-from>1</Hsp_query-from>
+              <Hsp_query-to>435</Hsp_query-to>
+              <Hsp_hit-from>1</Hsp_hit-from>
+              <Hsp_hit-to>165</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>145</Hsp_identity>
+              <Hsp_positive>145</Hsp_positive>
+              <Hsp_gaps>20</Hsp_gaps>
+              <Hsp_align-len>165</Hsp_align-len>
+              <Hsp_qseq>MGIGCWRNPLLLLIALVLSAKLGHFQRWEGFQQKLMSKKNMNSTLNFFIQSYNNASNDTYLYRVQRLIRSQMQ--------------------LTTGVEYIVTVKIGWTKCKRNDTSNSSCPLQSKKLRKSLICESLIYTMPWINYFQLWNNSCLEAEHVGRNLR</Hsp_qseq>
+              <Hsp_hseq>MGIGCWRNPLLLLIALVLSAKLGHFQRWEGFQQKLMSKKNMNSTLNFFIQSYNNASNDTYLYRVQRLIRSQMQERVSHWMLGVHTNSTTDSRQLTTGVEYIVTVKIGWTKCKRNDTSNSSCPLQSKKLRKSLICESLIYTMPWINYFQLWNNSCLEAEHVGRNLR</Hsp_hseq>
+              <Hsp_midline>MGIGCWRNPLLLLIALVLSAKLGHFQRWEGFQQKLMSKKNMNSTLNFFIQSYNNASNDTYLYRVQRLIRSQMQ                    LTTGVEYIVTVKIGWTKCKRNDTSNSSCPLQSKKLRKSLICESLIYTMPWINYFQLWNNSCLEAEHVGRNLR</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+      </Iteration_hits>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>1.79563e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>VEGA</BlastOutput_query-def>
+  <BlastOutput_query-len>444</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_hits>
+        <Hit>
+          <Hit_num>1</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|21131</Hit_id>
+          <Hit_def>lcl|CST9_HUMAN (Q9H4G1) Cystatin 9-like precursor</Hit_def>
+          <Hit_accession>21131</Hit_accession>
+          <Hit_len>147</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>177.948</Hsp_bit-score>
+              <Hsp_score>450</Hsp_score>
+              <Hsp_evalue>5.63325e-45</Hsp_evalue>
+              <Hsp_query-from>1</Hsp_query-from>
+              <Hsp_query-to>435</Hsp_query-to>
+              <Hsp_hit-from>1</Hsp_hit-from>
+              <Hsp_hit-to>145</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>88</Hsp_identity>
+              <Hsp_positive>101</Hsp_positive>
+              <Hsp_align-len>145</Hsp_align-len>
+              <Hsp_qseq>MWSLPPSRALSCAPLLLLFSFQFLVTYAWRFQEEEEWNDQKQIAVYLPPTLEFAVYTFNKQSKDWYAYKLVPVLASWKEQGYDKMTFSMNLQLGRTMCGKFEDDIDNCPFQESPELNNTCTCFFTIGIEPWRTRFDLWNKTCSGG</Hsp_qseq>
+              <Hsp_hseq>MLGLPWKGGLSWALLLLLLGSQILLIYAWHFHEQRDCDEHNVMARYLPATVEFAVHTFNQQSKDYYAYRLGHILNSWKEQVESKTVFSMELLLGRTRCGKFEDDIDNCHFQESTELNNTFTCFFTISTRPWMTQFSLLNKTCLEG</Hsp_hseq>
+              <Hsp_midline>M  LP    LS A LLLL   Q L+ YAW F E+ + ++   +A YLP T+EFAV+TFN+QSKD+YAY+L  +L SWKEQ   K  FSM L LGRT CGKFEDDIDNC FQES ELNNT TCFFTI   PW T+F L NKTC  G</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+      </Iteration_hits>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>1.8737e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>CST9</BlastOutput_query-def>
+  <BlastOutput_query-len>480</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>2.24726e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+      <Iteration_message>No hits found</Iteration_message>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastx</BlastOutput_program>
+  <BlastOutput_version>blastx 2.2.6 [Apr-09-2003]</BlastOutput_version>
+  <BlastOutput_reference>~Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, ~Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), ~&quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search~programs&quot;,  Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>sprot</BlastOutput_db>
+  <BlastOutput_query-ID>lcl|QUERY</BlastOutput_query-ID>
+  <BlastOutput_query-def>CST9L</BlastOutput_query-def>
+  <BlastOutput_query-len>444</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>1e-40</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>S</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+  <BlastOutput_iterations>
+    <Iteration>
+      <Iteration_iter-num>1</Iteration_iter-num>
+      <Iteration_hits>
+        <Hit>
+          <Hit_num>1</Hit_num>
+          <Hit_id>gnl|BL_ORD_ID|21131</Hit_id>
+          <Hit_def>lcl|CST9_HUMAN (Q9H4G1) Cystatin 9-like precursor</Hit_def>
+          <Hit_accession>21131</Hit_accession>
+          <Hit_len>147</Hit_len>
+          <Hit_hsps>
+            <Hsp>
+              <Hsp_num>1</Hsp_num>
+              <Hsp_bit-score>274.633</Hsp_bit-score>
+              <Hsp_score>701</Hsp_score>
+              <Hsp_evalue>4.42227e-74</Hsp_evalue>
+              <Hsp_query-from>1</Hsp_query-from>
+              <Hsp_query-to>441</Hsp_query-to>
+              <Hsp_hit-from>1</Hsp_hit-from>
+              <Hsp_hit-to>147</Hsp_hit-to>
+              <Hsp_query-frame>1</Hsp_query-frame>
+              <Hsp_identity>147</Hsp_identity>
+              <Hsp_positive>147</Hsp_positive>
+              <Hsp_align-len>147</Hsp_align-len>
+              <Hsp_qseq>MLGLPWKGGLSWALLLLLLGSQILLIYAWHFHEQRDCDEHNVMARYLPATVEFAVHTFNQQSKDYYAYRLGHILNSWKEQVESKTVFSMELLLGRTRCGKFEDDIDNCHFQESTELNNTFTCFFTISTRPWMTQFSLLNKTCLEGFH</Hsp_qseq>
+              <Hsp_hseq>MLGLPWKGGLSWALLLLLLGSQILLIYAWHFHEQRDCDEHNVMARYLPATVEFAVHTFNQQSKDYYAYRLGHILNSWKEQVESKTVFSMELLLGRTRCGKFEDDIDNCHFQESTELNNTFTCFFTISTRPWMTQFSLLNKTCLEGFH</Hsp_hseq>
+              <Hsp_midline>MLGLPWKGGLSWALLLLLLGSQILLIYAWHFHEQRDCDEHNVMARYLPATVEFAVHTFNQQSKDYYAYRLGHILNSWKEQVESKTVFSMELLLGRTRCGKFEDDIDNCHFQESTELNNTFTCFFTISTRPWMTQFSLLNKTCLEGFH</Hsp_midline>
+            </Hsp>
+          </Hit_hsps>
+        </Hit>
+      </Iteration_hits>
+      <Iteration_stat>
+        <Statistics>
+          <Statistics_db-num>144731</Statistics_db-num>
+          <Statistics_db-len>53363726</Statistics_db-len>
+          <Statistics_hsp-len>0</Statistics_hsp-len>
+          <Statistics_eff-space>1.8737e+09</Statistics_eff-space>
+          <Statistics_kappa>0.041</Statistics_kappa>
+          <Statistics_lambda>0.267</Statistics_lambda>
+          <Statistics_entropy>0.14</Statistics_entropy>
+        </Statistics>
+      </Iteration_stat>
+    </Iteration>
+  </BlastOutput_iterations>
+</BlastOutput>
