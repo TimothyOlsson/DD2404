@@ -79,6 +79,9 @@ for f1 in file_list:
 
 stop_time = time.time()
 
+#Phylip requires amount of sequences first, compatibility
+dist_matrix.insert(0,[str(len(file_list))])
+
 for i in dist_matrix:
     """Make list into string, delimit by tab, remove ' and strip away [ and ], then add new line"""
     print(str(i).replace(',','\t').replace("'",'').strip('[]') + '\n')
