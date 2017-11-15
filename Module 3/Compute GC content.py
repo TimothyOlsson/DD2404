@@ -4,6 +4,10 @@ have high GC content. GC pairs are also more stable than AT,
 due to more hydrogen bonds (3 vs 2)
 """
 
+"""In python 2.7, using ex 25/100 will yield 0, but not in 3.6. This fixes it"""
+from __future__ import division
+
+
 import sys
 import os
 import time

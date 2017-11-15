@@ -4,6 +4,7 @@ import time
 #import numpy #Can be used  to improve the matrix creation
 import math
 
+
 """
 Example of user mistakes:
 Not using fasta file
