@@ -2,7 +2,7 @@ import logging
 import time
 import pdb
 
-pdb.set_trace()
+#pdb.set_trace()
 
 logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',
                     filename='example.log',

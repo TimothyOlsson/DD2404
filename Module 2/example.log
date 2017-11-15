@@ -18,3 +18,15 @@ Start of run
 ########
 Start of run
 2017-11-10 11:46:38,901 INFO     K = 5
+2017-11-14 16:20:14,252 INFO     
+
+########
+Start of run
+2017-11-14 16:20:30,636 INFO     
+
+########
+Start of run
+2017-11-14 16:20:30,642 INFO     K = 5
+2017-11-14 16:20:30,645 WARNING  This is a warning. y = 0
+2017-11-14 16:20:30,645 ERROR    This is an error, x = None
+2017-11-14 16:20:35,646 CRITICAL Error message: division by zero

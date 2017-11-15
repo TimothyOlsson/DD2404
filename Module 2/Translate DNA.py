@@ -66,6 +66,7 @@ class bio_class():
                 _orf_list = [seq[i+orf:i+orf+3] for i in range(0, len(seq), 3)]
                 _orf_list = [x for x in _orf_list if len(x) == 3] #Remove non codons
                 positions_stop = [index for index,value in enumerate(_orf_list) if value in self.stop_codons]
+
                 if positions_stop == []:
                     found_orfs.append(''.join(_orf_list))
                 else:
