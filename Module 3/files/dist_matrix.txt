@@ -1,3 +1,0 @@
-bacillus_s	 0.0	 0.0148	 0.0268
-chlamydia_	 0.0148	 0.0	 0.0121
-haemophilu	 0.0268	 0.0121	 0.0

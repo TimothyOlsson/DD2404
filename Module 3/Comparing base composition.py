@@ -1,3 +1,6 @@
+from __future__ import division
+"""In python 2.7, using ex 25/100 will yield 0, but not in 3.6. This fixes it"""
+
 import sys
 import os
 import time
