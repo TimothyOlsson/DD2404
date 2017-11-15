@@ -26,16 +26,16 @@ for file_name in file_list:
         else:
             if bool(re.search(re_pattern, str(seq.seq))): #re.match didnt work...
                 f.write('>' + seq.id)
-                f.write(seq.seq)
+                f.write(str(seq.seq))
 
 f.close()
 
 #Call automatically waits
-process = subprocess.call(["muscle -in",
-                          out_file + '.txt',
-                          "-out",
-                          out_file + '_ALIGNED' + '.txt'],
-                          shell=True)
+process = subprocess.call(['muscle',
+                           '-in',
+                           out_file + '.txt',
+                           "-out",
+                           out_file + '_ALIGNED' + '.txt'])
 
 stop_time = time.time()
 
