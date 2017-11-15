@@ -12,7 +12,6 @@ import math
 Example of user mistakes:
 Not using fasta file
 Files not existing, not in files folder
-
 """
 
 file_list = sys.argv[1:] #First in list is the name of the script

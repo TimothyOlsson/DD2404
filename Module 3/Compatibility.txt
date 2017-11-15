@@ -2,3 +2,9 @@ Neighbor joining:
 Reminds of UPGMA, but provides different lenghts of branches. The method does not 
 assume ultrametric evolution (evolution at the same rate) and has different branch lenghts.
 The branch length are the amount of evolutionary change.
+
+
+Program is compatible. Added some things for compatibility between the programs.
+
+
+The tree is the generated tree. Also in Newick format.
