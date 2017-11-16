@@ -8,15 +8,6 @@ import math
 import subprocess
 import tempfile
 
-
-"""
-Example of user mistakes:
-Not using fasta file
-Files not existing, not in files folder
-
-"""
-
-
 #Function, reading fasta files
 def read_fasta(self, file_contents):
     names = []
@@ -34,29 +25,30 @@ def read_fasta(self, file_contents):
     sequences.append(''.join(_seq).upper()) #upper case
     return names, sequences
 
-
-file_list = sys.argv[1:] #First in list is the name of the script
+arg_list = sys.argv[1:] #First in list is the name of the script
 os.chdir('files')
 
 ##Error handling
-if len(file_list) > 1:
-    print('Please input just one file with aligned AA')
+if len(arg_list) != 2:
+    print("""Usage:\n
+           bootstrap <filename> <number of boostraps>""")
     quit()
-for file_name in file_list:
-    if os.path.splitext(file_name)[1] not in ['.fa','.FA','.fasta','.FASTA']:
-        print('Wrong file type used. Only use fasta files!')
-        quit()
-    elif not os.path.isfile(file_name):
-        print('File not found: %s' % file_name)
-        quit()
+if os.path.splitext(arg_list[0])[1] not in ['.fa','.FA','.fasta','.FASTA']:
+    print('Wrong file type used. Only use fasta files!')
+    quit()
+elif not os.path.isfile(arg_list[0]):
+    print('File not found: %s' % arg_list[0])
+    quit()
 
+temp_file = tempfile.NamedTemporaryFile(mode='w+') #Opens in read and write mode
+print(arg_list)
+with open(arg_list[0], 'r') as f:
+    for i in f:
+        temp_file.write(i)
 
-f = tempfile.NamedTemporaryFile(delete=False, mode='w+') #Opens in read and write mode
-f.write((str('Test').replace(',','\t').replace("'",'').strip('[]') + '\n'))
-
-f.seek(0) #Go to start of file
-print(f.read())
-print(f.name)
-f.close()
-os.rename(f.name,'infile')
-print(f.name)
+temp_file.seek(0) #Go to start of file
+print(temp_file.read())
+print(temp_file.name)
+os.rename(temp_file.name,'infile')
+print(temp_file.name)
+temp_file.close()
