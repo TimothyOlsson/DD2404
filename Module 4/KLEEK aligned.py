@@ -25,8 +25,8 @@ for file_name in file_list:
             pass
         else:
             if bool(re.search(re_pattern, str(seq.seq))): #re.match didnt work...
-                f.write('>' + seq.id)
-                f.write(str(seq.seq))
+                f.write('>' + seq.id + '\n') #Don't forget next line
+                f.write(str(seq.seq) + '\n')
 
 f.close()
 
