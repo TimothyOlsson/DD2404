@@ -7,7 +7,6 @@ import sys
 import warnings
 warnings.filterwarnings("ignore")
 
-
 os.chdir('files')
 file_list = sys.argv[1:]
 
