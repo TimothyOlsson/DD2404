@@ -65,51 +65,82 @@ if __name__ == "__main__":
     tmp_file.write(str(len(names)) + '\t' + str(len(sequences[0])) + '\n')
     for i in range(len(names)):
         tmp_file.write(names[i] + ' '*(10 - len(names[i])) + sequences[i] + '\n')
-    tmp_file.seek(0) #Go to start of file
+    tmp_file.seek(0) # Go to start of file
     path_to_tmp = os.path.split(tmp_file.name)
     os.chdir(path_to_tmp[0])
+    
     try:
-	os.remove('outfile') #Clear from previous runs
+	os.remove('outfile') # Clear from previous runs
+	os.remove('infile')
     except:
 	pass
-    process = subprocess.Popen(['phylip','protdist'],
-                               stdin=subprocess.PIPE,
-                               stdout=subprocess.PIPE,
-                               stderr=subprocess.PIPE)
 
+    # WITH boostrapping
     if debug_check:
 	print(tmp_file.read())
 	time.sleep(3)
 
     tmp_file.close()
+    start_time = time.time()
+    process = subprocess.Popen(['phylip','seqboot'],
+                               stdin=subprocess.PIPE,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE) 
     stderr, stdout = process.communicate(input=(path_to_tmp[1] + '\n'
 						'I' + '\n'
-						'Y' + '\n'))
+						'R' + '\n'
+						+ str(arg_list[1]) + '\n'
+						'Y' + '\n'
+						+ '1' + '\n'))
+    stop_time = time.time()
     if debug_check:
 	print(stderr)
+	print('It took {} seconds to calculate'.format(stop_time - start_time))
 	time.sleep(3)
-    
 
     try:
-	os.remove(path_to_tmp[1]) #Clear from previous runs
+	os.remove(path_to_tmp[1]) #Clear tmp file
     except:
 	pass
-    os.rename('outfile', 'outfile_tmp')
+
+
+    # Protein distance
+    os.rename('outfile','infile')
+    start_time = time.time()
+    process = subprocess.Popen(['phylip','protdist'],
+                               stdin=subprocess.PIPE,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)    
+    stderr, stdout = process.communicate(input=('I' + '\n'
+						'M' + '\n'
+						'D' + '\n'
+						+ str(arg_list[1]) + '\n'
+						'Y' + '\n'))
+    stop_time = time.time()
+    if debug_check:
+	print(stderr)
+	print('It took {} seconds to calculate'.format(stop_time - start_time))
+	time.sleep(3)
+    
+    # Neighbor
+    os.rename('outfile', 'infile')
+    start_time = time.time()
     process = subprocess.Popen(['phylip','neighbor'],
                                stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
-    stderr, stdout = process.communicate(input=('outfile_tmp' + '\n'
-						'Y' + '\n'))
+    stderr, stdout = process.communicate(input=('Y' + '\n'))
     
-
+    stop_time = time.time()
     if debug_check:
 	print(stderr)
+	print('It took {} seconds to calculate'.format(stop_time - start_time))
 	time.sleep(3)
 
-    os.remove('outfile_tmp')
+    os.remove('infile')
     sys.stderr.write('\x1b[2J\x1b[H') # Clear terminal
     with open('outfile','r') as f1, open('outtree','r') as f2:
+	print('###########################\nDONE\n')		
 	print(f2.read())
 	
 	start_print = False
@@ -118,11 +149,10 @@ if __name__ == "__main__":
 		print(line)
 	    if 'Negative' in line:
 		start_print = True
-	    elif 'remember' in line:
-		start_print = False
 
     os.remove('outfile')
     os.remove('outtree')
+
 	
 
 
