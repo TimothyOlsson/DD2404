@@ -8,8 +8,9 @@ import math
 import subprocess
 import tempfile
 
-#Function, reading fasta files
+# Function, reading fasta files
 def read_fasta(self, file_contents):
+    """Input: list from fasta file, Output: 2 lists with names and sequences"""
     names = []
     sequences = []
     _seq = []
@@ -30,6 +31,7 @@ os.chdir('files')
 
 ##Error handling
 if len(arg_list) != 2:
+    print('No bootstrap value added!')
     print("""Usage:\n
            bootstrap <filename> <number of boostraps>""")
     quit()
@@ -40,15 +42,33 @@ elif not os.path.isfile(arg_list[0]):
     print('File not found: %s' % arg_list[0])
     quit()
 
-temp_file = tempfile.NamedTemporaryFile(mode='w+') #Opens in read and write mode
+try:
+    int(arg_list[1])
+except:
+    print('Bootstrap value is not a number')
+    print("""Usage:\n
+           bootstrap <filename> <number of boostraps>""")
+    quit()
+
+tmp_file = tempfile.NamedTemporaryFile(mode='w+') #Opens in read and write mode
 print(arg_list)
 with open(arg_list[0], 'r') as f:
     for i in f:
-        temp_file.write(i)
+        tmp_file.write(i)
 
-temp_file.seek(0) #Go to start of file
-print(temp_file.read())
-print(temp_file.name)
-os.rename(temp_file.name,'infile')
-print(temp_file.name)
-temp_file.close()
+tmp_file.seek(0) #Go to start of file
+path_to_tmp = os.path.split(tmp_file.name)
+
+os.chdir(path_to_tmp[0])
+
+process = subprocess.Popen(['phylip','neighbor'],
+                           stdin=subprocess.PIPE,
+                           stdout=subprocessPIPE,
+                           stderr=subprocess.PIPE)
+
+process.communicate(path_to_tmp[1])
+
+#process = subprocess.call(['phylip','neighbor', [arg for sublist in lists for item in sublist]
+
+
+
