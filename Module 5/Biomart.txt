@@ -1,0 +1,48 @@
+Preliminaries
+
+Gene = Part of the genome that is transcribed (could transcribe for miRNA, proteins etc)
+Transcripts = Result of RNA polymerase that has transcribed a gene (usually mRNA, but could be something else).
+Exons = Part of a gene that is used in the final product (ex in a protein or miRNA)
+Introns = Spliced regions from a gene that is not used
+Untranslated regions (UTR) = After transcription (introns are cut off), some parts of the mRNA are not translated into proteins. 
+Alternative transcripts = Multiple ways to splice a genome and combine exons. One gene can give many proteins/products
+Homolog = Two genes related from one ancesteral gene that has differentiated due to speciation. (ex from clade)
+Ortholog = Two related genes (as above) in two species that retained it's function.
+Paralog = Two related genes that has been produced via gene duplication.
+
+
+Trying Ensembl BioMart
+
+1. 22375 out of 63967 genes are protein coding, filter: GENE - Gene-type - protein_coding, (However, that doesnt mean that they are all unique)
+2. 21579 out of 63967 genes that are protein coding have been assigned an ID from HGNC, filter: GENE - Limit to genes (external references) - HGNC symbol ID
+3. 16892 out of 53110 genes in the database are paralogs for mouse, filter: MULTI SPECIES COMPARISONS - Homologue filters - Orthologous Mouse Lemur Genes
+
+
+Retrieving results
+
+You can download the results in URL, XML and Perl.
+URL: just a link that takes you to the query with all the filters
+XML: A file containing the query and the filters, which can be used to get the same
+PERL: A script that uses the programming language Perl (predecessor to Python?), which can be used to send the query to Biomart
+
+
+Downloading sequences
+
+1. Ligand-binding domain of nuclear hormone receptor = PF00104
+   Filter in PROTEIN DOMAINS AND FAMILIES: -  Limit to genes with these family or domain IDs - Pfam domain
+   53 genes from Human dataset
+   Download file can be downloaded as HTML, CSV, TSV and XLS
+
+2. Unspliced transcript: Full transcript sequence. If the transcript is mRNA it is called pre-mRNA, i.e before splicing away introns. Note: One gene can have many transcripts
+   Unspliced gene: Full gene sequence, with exons and introns
+   Difference: DNA and RNA
+   http://parasite.wormbase.org/info/Tools/biomart.html
+
+3. cDNA is the complementary strand for mRNA in DNA, which only contains the exons
+   As mentioned above, unspliced transcript is the pre-mRNA that contains both exons and introns
+   Difference: DNA with exons and RNA with exons + introns
+
+4. 230 rows of Gene stable ID and Transcript stable ID.
+   Unique results only added
+   http://www.ensembl.org/biomart/martview/fd98c3632a6218db75783ff245c58343
+   Reason: If you look at gene stable id, one gene results in many different transcripts due to alternate splicing

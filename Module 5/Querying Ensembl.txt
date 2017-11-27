@@ -1,0 +1,113 @@
+https://www.ensembl.org/info/data/mysql.html
+https://dev.mysql.com/doc/refman/5.5/en/error-messages-server.html
+https://cmanios.wordpress.com/2013/04/19/mysql-connect-error-1129/
+PORT 4306, not 5306 or 3306
+Homo sapiens core 38_36 is the latest (look at show databases)
+\! clear --> clears terminal :)
+
+
+1. How many databases are available for cat, felis catus?
+
+   Command:
+   SHOW databases LIKE 'felis%';
+   
+   Result:
+   5 databases (only core databases)
+
+2. Use the show and describe commands to figure what tables are related to describing genes, transcripts, and exons.
+   What information are these tables storing and how do the tables relate to each other?
+
+   Commands:
+   SELECT DATABASE();  # should return null if none is selected
+   USE homo_sapiens_core_38_36;  # Returns database changed
+   SELECT DATABASE();  # Returns that the database is selected
+   SHOW TABLES;  # Returns all tables that exist in database, 83 rows
+
+   There are tables; dna, exon, exon transcript, transcript and gene.
+   exon seems to have the columns;
+   exon_id, seq_region_id, seq_region_start, seq_region_end, seq_region_strand,
+   phase and end_phase.
+
+   All of the columns type are short ints, meaning that no sequence data is found.
+   As the picture in the folder, the sequence is located in one table while the others
+   tables contains description used for annotation and describing each gene.
+
+3. How many genes are registred for human? Make a breakdown based on the column "biotype"
+   by using the GROUP BY directive.
+
+   In the table "gene", a column called biotype is found. I will use that to count the
+   amount of genes. NOTE: Using homo_sapiens_core_38_36 database
+
+   Command:
+   SELECT biotype, COUNT(1) FROM gene GROUP BY biotype;
+   Result:
+
++---------------------+----------+
+| biotype             | COUNT(1) |
++---------------------+----------+
+| miRNA               |      493 |
+| miRNA_pseudogene    |       35 |
+| misc_RNA            |     1066 |
+| misc_RNA_pseudogene |        9 |
+| Mt_rRNA             |        2 |
+| Mt_tRNA             |       22 |
+| Mt_tRNA_pseudogene  |      674 |
+| protein_coding      |    23710 |
+| pseudogene          |      731 |
+| rRNA                |      341 |
+| rRNA_pseudogene     |      676 |
+| scRNA               |       34 |
+| scRNA_pseudogene    |     1714 |
+| snoRNA              |      809 |
+| snoRNA_pseudogene   |      819 |
+| snRNA               |     1429 |
+| snRNA_pseudogene    |     1866 |
+| tRNA_pseudogene     |      131 |
++---------------------+----------+
+18 rows in set (0,14 sec)
+
+   Command: SELECT COUNT(1) FROM gene;
+   Result:
+   34561 hits
+
+4. How many processed pseudogenes have a non-empty description string? 
+
+   Gene table has many columns. We are interested in biotype and description.
+   Check every row where biotype has pseudogene and then check if description column is empty.
+
+   Command:
+   SELECT COUNT(1) FROM gene WHERE gene.biotype LIKE '%pseudogene' AND gene.description IS NOT NULL;
+   Result:
+   39 hits
+
+   NOTE: This number seems a bit low! If you have gene.biotype, you only get "pseudogene" and nothing else.
+   However, if you remove NOT from IS NOT NULL, you get thousands of hits. Maybe the particular database has few descriptions?
+   This seems to be the case, since using the command below gives 15925 hits.
+   SELECT COUNT(1) FROM gene WHERE gene.description IS NULL;
+   And using this command gets us 18636 hits.
+   SELECT COUNT(1) FROM gene WHERE gene.description IS NOT NULL;
+
+   Maybe pseudogenes just happens to not have descriptions?
+
+
+5. How many transcripts are associated with the two breast-cancer associated genes BRCA1 (ENSG00000012048) and BRCA2 (ENSG00000139618)?
+   Your solution is supposed to be written as one SQL query. 
+
+   Easy peasy! Just check where the associated genes are in which table/column.
+   Found ids in gene_archive in column gene_stable_id. Each id is associated with transcript --> number of entries with name = transcripts
+   https://www.ensembl.org/Help/View?id=143
+   https://www.ensembl.org/info/docs/api/core/core_schema.html#gene
+   
+   TIP: use SELECT <column_name> FROM <table_name> LIMIT <number of prints>
+
+   SELECT COUNT(!) FROM gene_archive WHERE gene_stable_id LIKE 'ENSG00000012048' OR gene_stable_id LIKE 'ENSG00000139618';
+
+   Result:
+   62 hits
+
+   NOTE: if only ...12048 is choosen, 59 hits and ....139618 has 3 hits.
+   This will of course be different if you are looking at another homo_sapiens_core database!   
+
+
+
+

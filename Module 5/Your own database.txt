@@ -1,0 +1,128 @@
+Loading data
+
+1. If you use .read repeatedly, you will get warnings! Why?
+   
+   Since you load the database multiple times and since tables already exist, you get an error
+
+
+Database schema
+
+1. Figure out what the schema of the loaded database is!
+   
+".schema <table_name>" shows how table was created
+   ".tables" lists all tables
+
+   Using .tables:
+   4 tables: family, familymembers, protein, species
+   
+   family: 2 columns; acc and descr (NOTE: the descr looks like it has 2 columns, but its just a string with , in it)
+	create table family(acc, descr)
+   
+   familymembers: 2 columns; family and column with both family and protein
+	create table familymembers(family, protein, PRIMARY KEY(family, protein)
+   
+   protein: 3 columns; accession, species and sequence
+	create table protein(accession, species, sequence)
+   
+   species: 3 columns; abbrev, name and common
+	create table species(abbrev, name, common)
+
+   it seems that protein and familymembers uses the other tables inside the columns. Is that true?
+
+
+Querying the database
+
+1. What species are in the database?
+
+   using .dump species:
+
+   Human, mouse, chicken, african clawed frog, cow, pufferfish, zebrafish, fly and nematode
+
+2. Add another species to the database: Sus scrofa!
+
+   Sus scrofa = wild boar
+   Open protdb.sqlite3 in text editor and add to the table species:
+   INSERT INTO "species" VALUES('Ss','Sus scrofa','Wild boar');
+
+   Is there a way to do this in the sqlite3 program? I believe that it would be easy to automate with a script
+
+   Found out that you can do that. You just write the command in the sqlite3 console (dont forget ;) and it will work. Checked with .dump species
+
+3. What proteins are longer than 1000 aa?
+
+   SELECT COUNT("sequence") FROM protein WHERE LENGTH("sequence") > 1000;
+
+   Query returns all sequences longer than 1000 from table protein and column sequences. The count function just returns the amount of hits
+
+   5 total hits found
+
+4. What species are present in family NHR3? Give a full list with full species names using one SQL statement.
+
+   You can find everything in familymembers. First column is the family name when the next column contains both protein name and species.
+   Remember, we want full sepecies name, so we have to take from different tables.
+
+   Example:
+   family: 'NHR3', 'Nuclear Hormone receptor, subfamily 3'
+   familymembers: 'NHR3', 'ESR1_HUMAN'
+   species: 'Hs', 'Homo sapiens', 'Human'
+   protein: 'ESR1_HUMAN', 'Hs', <sequence>
+   
+   We want the full species name "Homo sapiens" displayed, but ignoring duplicates.
+   
+   One line:
+   SELECT species.name FROM species WHERE species.abbrev IN (SELECT protein.species FROM protein WHERE protein.accession IN (SELECT familymembers.protein FROM familymembers WHERE familymembers.family LIKE 'NHR3'));
+
+   Triple line:
+   SELECT species.name FROM species WHERE species.abbrev IN
+   (SELECT protein.species FROM protein WHERE protein.accession IN
+   (SELECT familymembers.protein FROM familymembers WHERE familymembers.family LIKE 'NHR3'));
+
+   Explination:
+   Nested SELECT, which each layer checks for value in one column and outputs value from another column
+   First layer gives 'Homo sapiens' if 'Hs' is found in layer below
+   Second layer gives 'Hs' if 'ESR1_HUMAN' is found in layer below
+   Third layer gives 'ESR1_HUMAN' if the column with family is 'NHR3'
+
+   Result:
+   Branchydanio rerio
+   Bos taurus
+   Gallus gallus
+   Gomo sapiens
+   Mus musculus
+   Xenopus laevis
+
+5. How many proteins from each species are present in the database?
+
+   Use query:
+   SELECT gene.biotype, COUNT(1) FROM gene GROUP BY gene.biotype LIKE '%pseudogene';
+
+   Result:
+   Br|6
+   Bt|6
+   Ce|50
+   Dm|16
+   Gg|11
+   Hs|47
+   Mm|42
+   Tr|1
+   Xl|16
+
+6. How do you change the schema to add information about a protein's structure?
+   You want to store the name for the structure (such as 2xkg, 5fvl or 6eny), resolution (1.6Å, 1.97Å, or similar) and method ("Solution NMR", "X-ray diffraction").
+   Remember that a protein may have several structures published. Make your suggested changes and add some example data that you make up!
+
+   Use command:
+   ALTER TABLE protein ADD structure VARCHAR(50);
+   ALTER TABLE protein ADD resolution VARCHAR(20);
+   ALTER TABLE protein ADD method VARCHAR(100);
+
+   Note that all existing entries will have NULL in these columns.
+   I have not found a way to add all columns in one statement.
+
+   If multiple structures, do as family table has done, where it stores the structures in a string like this:
+   "2xkg, 5fvl, 6eny"
+   It will be much easier to handle when using a programming language where you can split the string into a list with , as the delimiter.
+
+   
+   
+   
