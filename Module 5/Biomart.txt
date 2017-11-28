@@ -1,6 +1,6 @@
 Preliminaries
 
-Gene = Part of the genome that is transcribed (could transcribe for miRNA, proteins etc)
+Gene = Part of the genome that is transcribed (could transcribe for miRNA, mRNA, siRNA etc)
 Transcripts = Result of RNA polymerase that has transcribed a gene (usually mRNA, but could be something else).
 Exons = Part of a gene that is used in the final product (ex in a protein or miRNA)
 Introns = Spliced regions from a gene that is not used
@@ -22,7 +22,7 @@ Retrieving results
 
 You can download the results in URL, XML and Perl.
 URL: just a link that takes you to the query with all the filters
-XML: A file containing the query and the filters, which can be used to get the same
+XML: A file containing the query and the filters, which can be used to get the same. Extendable markup language
 PERL: A script that uses the programming language Perl (predecessor to Python?), which can be used to send the query to Biomart
 
 

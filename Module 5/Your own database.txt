@@ -34,9 +34,13 @@ Querying the database
 
 1. What species are in the database?
 
-   using .dump species:
+   Using:
+   .dump species:
 
    Human, mouse, chicken, african clawed frog, cow, pufferfish, zebrafish, fly and nematode
+
+   Could also use:
+   SELECT * FROM species;
 
 2. Add another species to the database: Sus scrofa!
 
@@ -94,7 +98,7 @@ Querying the database
 5. How many proteins from each species are present in the database?
 
    Use query:
-   SELECT gene.biotype, COUNT(1) FROM gene GROUP BY gene.biotype LIKE '%pseudogene';
+   SELECT protein.species, COUNT(1) FROM species GROUP BY protein.species;
 
    Result:
    Br|6

@@ -2,6 +2,7 @@ https://www.ensembl.org/info/data/mysql.html
 https://dev.mysql.com/doc/refman/5.5/en/error-messages-server.html
 https://cmanios.wordpress.com/2013/04/19/mysql-connect-error-1129/
 PORT 4306, not 5306 or 3306
+PS: Seems to work on all ports. Maybe they had a temporary failure?
 Homo sapiens core 38_36 is the latest (look at show databases)
 \! clear --> clears terminal :)
 
@@ -100,7 +101,7 @@ Homo sapiens core 38_36 is the latest (look at show databases)
    
    TIP: use SELECT <column_name> FROM <table_name> LIMIT <number of prints>
 
-   SELECT COUNT(!) FROM gene_archive WHERE gene_stable_id LIKE 'ENSG00000012048' OR gene_stable_id LIKE 'ENSG00000139618';
+   SELECT COUNT(1) FROM gene_archive WHERE gene_stable_id LIKE 'ENSG00000012048' OR gene_stable_id LIKE 'ENSG00000139618';
 
    Result:
    62 hits
